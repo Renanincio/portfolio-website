@@ -6,7 +6,7 @@ export const SkillsContainer = styled.section`
   display: flex;
   justify-content: center;
   flex-direction: column;
-`;
+`
 
 export const SkillsHeader = styled.header`
   max-width: 100%;
@@ -14,7 +14,7 @@ export const SkillsHeader = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 export const SkillsContent = styled.div`
   display: flex;
@@ -26,10 +26,10 @@ export const SkillsContent = styled.div`
   justify-content: space-between;
   margin: 0 auto;
 
-  @media (max-width: 466px) {
+  @media(max-width: 466px){
     justify-content: center;
   }
-`;
+`
 
 export const Skills = styled.div`
   margin: 20px 30px;
@@ -38,8 +38,8 @@ export const Skills = styled.div`
   justify-content: center;
   text-align: center;
 
-  p {
+  p{
     color: white;
     font-weight: bold;
   }
-`;
+`

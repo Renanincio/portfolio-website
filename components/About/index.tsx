@@ -58,10 +58,7 @@ export const About = () => {
                 </SimpleText>
               </div>
             </div>
-            <a
-              href="/pdf/Currículo profissional da TI preto e cinza.pdf"
-              download
-            >
+            <a href="#" download>
               Download CV
               <span>
                 <FaDownload />

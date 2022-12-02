@@ -64,22 +64,14 @@ export const HomePage = () => {
             </abbr>
             <abbr title="GitHub">
               <li className="dontShow">
-                <a
-                  href="https://github.com/Renanincio"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://github.com/Renanincio" target="_blank" rel="noopener noreferrer">
                   <GoMarkGithub />
                 </a>
               </li>
             </abbr>
             <abbr title="LinkedIn">
               <li className="dontShow">
-                <a
-                  href="https://www.linkedin.com/in/renan-inacio-968401240/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href="https://www.linkedin.com/in/renan-inacio-968401240/" target="_blank" rel="noopener noreferrer">
                   <AiFillLinkedin />
                 </a>
               </li>
@@ -121,11 +113,9 @@ export const HomePage = () => {
                     isVisible ? "animate__animated animate__bounceInLeft" : ""
                   }
                 >
-                  Atualmente sou front end nível júnior e estou me tornando um
-                  desenvolvedor full stack web, já tive experiência de carteira
-                  assinada, porém foi na área administrativa, como jovem
-                  aprendiz, sou jovem, dedicado, aprendo rápido, tenho muito
-                  interesse em aprender e sou extremamente comprometido.
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos
+                  illo cumque animi exercitationem harum aspernatur ipsam at a
+                  error asperiores.
                 </SimpleText>
               )}
             </TrackVisibility>
