@@ -10,7 +10,7 @@ export const ProjectsContainer = styled.section`
   display: flex;
   justify-content: center;
   flex-direction: column;
-`
+`;
 
 export const ProjectsHeader = styled.header`
   max-width: 100%;
@@ -20,7 +20,7 @@ export const ProjectsHeader = styled.header`
   align-items: center;
   text-align: center;
 
-  span{
+  span {
     background-color: #121212;
     color: #fff;
     padding: 7px 12px;
@@ -30,15 +30,15 @@ export const ProjectsHeader = styled.header`
     border-radius: 50%;
     cursor: pointer;
     font-weight: bold;
-    transition: all .2s;
+    transition: all 0.2s;
   }
 
-  span:hover{
-    background-color: #32E7F0;
+  span:hover {
+    background-color: #32e7f0;
     color: #121212;
     border-color: #121212;
   }
-`
+`;
 
 export const ProjectsContent = styled.div`
   display: flex;
@@ -48,11 +48,11 @@ export const ProjectsContent = styled.div`
   min-height: 500px;
   margin: 0 auto;
 
-  h1{
+  h1 {
     margin: 14px auto;
   }
 
-  @media(max-width: 720px){
+  @media (max-width: 720px) {
     flex-wrap: nowrap;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -62,66 +62,68 @@ export const ProjectsContent = styled.div`
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
 
-    h1{
+    h1 {
       font-size: 16px;
     }
   }
 
-  @media(max-width: 380px){
-    h1{
+  @media (max-width: 380px) {
+    h1 {
       font-size: 12px;
     }
   }
-`
+`;
 
-export const Project = styled.div<BackgroundImage>`${({ backgroundImage }) => css`
-   width: 750px;
-   max-width: 100%;
-   height: 450px;
-   border-radius: 12px;
-   background-image: url(${backgroundImage});
-   background-blend-mode: multiply;
-   background-size: 100% 100%;
-   margin: 0px auto;
-   transition: all .2s;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   color: #32E7F0;
+export const Project = styled.div<BackgroundImage>`
+  ${({ backgroundImage }) => css`
+    width: 750px;
+    max-width: 100%;
+    height: 450px;
+    border-radius: 12px;
+    background-image: url(${backgroundImage});
+    background-blend-mode: multiply;
+    background-size: 100% 100%;
+    margin: 0px auto;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #32e7f0;
 
-   &:hover{
-    background-color: rgba(11, 12, 16, .7);
-   }
+    &:hover {
+      background-color: rgba(11, 12, 16, 0.7);
+    }
 
-   a{
-    font-size: 12px;
-    margin-top: 20px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .2s;
-    color: #32E7F0;
-   }
+    a {
+      font-size: 12px;
+      margin-top: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s;
+      color: #32e7f0;
+    }
 
-   span{
-    margin: 7px;
-    font-size: 16px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all .2s;
-   }
+    span {
+      margin: 7px;
+      font-size: 16px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s;
+    }
 
-   &:hover a, &:hover span{
-    opacity: 1;
-    visibility: visible;
-   }
+    &:hover a,
+    &:hover span {
+      opacity: 1;
+      visibility: visible;
+    }
 
-   @media(max-width: 720px){
-    height: 300px;
-   }
+    @media (max-width: 720px) {
+      height: 300px;
+    }
 
-   @media(max-width: 380px){
-    height: 200px;
-   }
-   `}
-`
+    @media (max-width: 380px) {
+      height: 200px;
+    }
+  `}
+`;
