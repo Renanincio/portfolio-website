@@ -122,7 +122,7 @@ export const HomePage = () => {
                   }
                 >
                   Atualmente sou front end nível júnior e estou me tornando um
-                  desenvolvedor full stack web, já tive experiência de carteira
+                  desenvolvedor web full stack, já tive experiência de carteira
                   assinada, porém foi na área administrativa, como jovem
                   aprendiz, sou jovem, dedicado, aprendo rápido, tenho muito
                   interesse em aprender e sou extremamente comprometido.
