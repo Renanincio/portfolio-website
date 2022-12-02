@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+type BackgroundImage = {
+  backgroundImage: string;
+};
 
 export const ProjectsContainer = styled.section`
   min-height: 100vh;
@@ -38,27 +42,47 @@ export const ProjectsHeader = styled.header`
 
 export const ProjectsContent = styled.div`
   display: flex;
-  flex-wrap: wrap;
-  max-width: 90%;
+  justify-content: center;
+  align-items: center;
   width: 80%;
   min-height: 500px;
-  background-color: #121212;
-  border-bottom: 5px solid #32E7F0;
   margin: 0 auto;
 
   h1{
     margin: 14px auto;
   }
+
+  @media(max-width: 720px){
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    min-height: min-content;
+    cursor: grab;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+
+    h1{
+      font-size: 16px;
+    }
+  }
+
+  @media(max-width: 380px){
+    h1{
+      font-size: 12px;
+    }
+  }
 `
 
-export const Project = styled.div`
-   width: 250px;
-   height: 150px;
+export const Project = styled.div<BackgroundImage>`${({ backgroundImage }) => css`
+   width: 750px;
+   max-width: 100%;
+   height: 450px;
    border-radius: 12px;
-   background-image: url(${props => props.background});
+   background-image: url(${backgroundImage});
    background-blend-mode: multiply;
    background-size: 100% 100%;
-   margin: 14px 7px 14px 14px;
+   margin: 0px auto;
    transition: all .2s;
    display: flex;
    flex-direction: column;
@@ -91,4 +115,13 @@ export const Project = styled.div`
     opacity: 1;
     visibility: visible;
    }
+
+   @media(max-width: 720px){
+    height: 300px;
+   }
+
+   @media(max-width: 380px){
+    height: 200px;
+   }
+   `}
 `

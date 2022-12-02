@@ -18,28 +18,28 @@ export const SkillsHeader = styled.header`
 
 export const SkillsContent = styled.div`
   display: flex;
+  flex-wrap: wrap;
   max-width: 90%;
+  width: 800px;
   height: 100%;
   align-items: center;
+  justify-content: space-between;
   margin: 0 auto;
+
+  @media(max-width: 466px){
+    justify-content: center;
+  }
 `
 
 export const Skills = styled.div`
-  width: 300px;
-  height: 350px;
-  padding: 30px 25px;
-  margin: 12px;
-  border-bottom: solid 5px #32E7F0;
-  background-color: #121212;
-
-  h1{
-    color: #32E7F0;
-    margin-bottom: 18px;
-  }
+  margin: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 
   p{
     color: white;
-    font-weight: bolder;
+    font-weight: bold;
   }
 `
-

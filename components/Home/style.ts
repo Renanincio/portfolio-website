@@ -1,16 +1,30 @@
 import styled, { css } from "styled-components";
 
-export const HomeContainer = styled.main`
+type BackgroundImage = {
+  backgroundImage: string;
+};
+
+type MenuVisible = {
+  isVisible: boolean;
+};
+
+export const HomeContainer = styled.main<BackgroundImage>`${({ backgroundImage }) => css`
   width: 100%;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url(${props => props.background});
+  background-image: url(${backgroundImage});
   background-size: 100% 100%;
   background-repeat: no-repeat;
+
+  @media(max-width: 720px){
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  `}
 `
 
-export const NavMenu = styled.nav`
+export const NavMenu = styled.nav<MenuVisible>`${({ isVisible }) => css`
   
   ul{
     position: fixed;
@@ -49,7 +63,7 @@ export const NavMenu = styled.nav`
     border-radius: 50%;
   }
 
-  ${({ isVisible }) => isVisible && css`
+  ${isVisible && css`
     ul{
       border-radius: 50%;
       height: 50px;
@@ -67,15 +81,55 @@ export const NavMenu = styled.nav`
       visibility: hidden;
     }
   `}
+  `}
+
+  @media(max-width: 720px){
+    ul{
+      top: 20px;
+      right: 20px;
+      width: 220px;
+      height: min-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ul li{
+      margin: 9px 5px;
+    }
+
+    ul li a{
+      font-size: 12px;
+      padding: 4px;
+    }
+
+    ${({ isVisible }) => isVisible && css`
+    ul{
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      transition: all .6s;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  `}
+  }
 `
 
 export const HomeContent = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 80%;
   height: 100%;
   margin: 0 auto;
+
+  @media(max-width: 720px){
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 `
 
 export const HomeContentLeft = styled.div`
@@ -85,6 +139,18 @@ export const HomeContentLeft = styled.div`
   p{
     padding-top: 14px;
     max-width: 500px;
+  }
+
+  @media(max-width: 720px){
+    order: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    p{
+      max-width: 100%;
+      text-align: center;
+    }
   }
 `
 
@@ -111,6 +177,25 @@ export const HomeContentRight = styled.div`
 
     100%{
       transform: translateY(-20px);
+    }
+  }
+
+  @media(max-width: 1080px){
+    img{
+      width: 300px;
+      height: 300px;
+    }
+
+  }
+
+  @media(max-width: 720px){
+    order: 0;
+    justify-content: center;
+
+    img{
+      max-width: 100%;
+      width: 250px;
+      height: 200px;
     }
   }
 `
